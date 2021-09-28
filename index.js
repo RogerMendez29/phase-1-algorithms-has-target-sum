@@ -1,13 +1,21 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[i] + array[j] === target) {
+        return true;
+      }
+    }
+  }
 }
+
+console.log(hasTargetSum([4], 4));
 
 /* 
   Write the Big O time complexity of your function here
 */
 
 /* 
-  Add your pseudocode here
+  iterate through the array twice adding each iteration per array index untill the target value is equall to the sum of the both iterations.
 */
 
 /*
